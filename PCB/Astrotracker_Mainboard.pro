@@ -1,4 +1,4 @@
-update=09/09/2020 22:47:49
+update=13/09/2020 20:38:56
 version=1
 last_client=kicad
 [general]
@@ -15,7 +15,7 @@ LibDir=
 [schematic_editor]
 version=1
 PageLayoutDescrFile=
-PlotDirectoryName=
+PlotDirectoryName=Export/2D/
 SubpartIdSeparator=0
 SubpartFirstId=65
 NetFmtName=Pcbnew
@@ -38,7 +38,7 @@ MinViaDrill=0.3
 MinMicroViaDiameter=0.2
 MinMicroViaDrill=0.09999999999999999
 MinHoleToHole=0.4
-TrackWidth1=0.127
+TrackWidth1=0.381
 TrackWidth2=0.15
 TrackWidth3=0.2
 TrackWidth4=0.4
@@ -246,7 +246,7 @@ Enabled=0
 [pcbnew/Netclasses/Default]
 Name=Default
 Clearance=0.127
-TrackWidth=0.127
+TrackWidth=0.381
 ViaDiameter=0.6
 ViaDrill=0.3
 uViaDiameter=0.6858
@@ -257,7 +257,7 @@ dPairViaGap=0.25
 [pcbnew/Netclasses/1]
 Name=+12V
 Clearance=0.127
-TrackWidth=1.397
+TrackWidth=1.524
 ViaDiameter=0.6
 ViaDrill=0.3
 uViaDiameter=0.6858
@@ -268,7 +268,18 @@ dPairViaGap=0.25
 [pcbnew/Netclasses/2]
 Name=+5V
 Clearance=0.127
-TrackWidth=0.2286
+TrackWidth=0.508
+ViaDiameter=0.6
+ViaDrill=0.3
+uViaDiameter=0.6858
+uViaDrill=0.3302
+dPairWidth=0.1524
+dPairGap=0.254
+dPairViaGap=0.25
+[pcbnew/Netclasses/3]
+Name=Motor
+Clearance=0.127
+TrackWidth=0.762
 ViaDiameter=0.6
 ViaDrill=0.3
 uViaDiameter=0.6858
