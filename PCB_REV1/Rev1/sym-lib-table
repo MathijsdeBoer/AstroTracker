@@ -1,3 +1,0 @@
-(sym_lib_table
-  (lib (name Astrotracker_Mainboard)(type Legacy)(uri ${KIPRJMOD}/Astrotracker_Mainboard.lib)(options "")(descr ""))
-)
