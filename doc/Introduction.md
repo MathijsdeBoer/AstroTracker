@@ -32,8 +32,8 @@ It wasn't untill the widespread availability of [dry plate photography](https://
 
 Henry Draper, 1880
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Orion-Nebula_A_A_Common.jpg" height=300 alt="Orion Nebula, Andrew Ainslie Common, 1883">
-<img src="https://upload.wikimedia.org/wikipedia/commons/0/04/18_inch_newtonian_telescope_back_yard_Ealing_London_Andrew_Ainslie_Common.png" height=300 alt="The telescope used by Andrew Ainslie Common, built into his shed, built in 1876, unknown date">
+<img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Orion-Nebula_A_A_Common.jpg" height=275 alt="Orion Nebula, Andrew Ainslie Common, 1883">
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/04/18_inch_newtonian_telescope_back_yard_Ealing_London_Andrew_Ainslie_Common.png" height=275 alt="The telescope used by Andrew Ainslie Common, built into his shed, built in 1876, unknown date">
 
 Left: Andrew Ainslie Common, 1883, right: The telescope built by him
 
@@ -45,7 +45,7 @@ Source(s): Wikipedia
 
 A camera.
 
-Joking aside, you don't need a good camera. Amateur astrophotographers have been using old webcams for about as long as they have been available. More recently, Raspberry Pis have had some level of use, too. That is not to say that a phone does not work. At the other end of the scales you have your DSLR/Mirrorless cameras, and dedicated astrocameras. These may be out of the price range of many people though. It's worth mentioning that entry level DSLRs tend to be in the $300 bracket, and are usable for things other than pretty star pictures.
+Joking aside, you don't really need a good camera, but it's nice if you do. Amateur astrophotographers have been using old webcams for about as long as they have been available. More recently, Raspberry Pis have had some level of use, too. That is not to say that a phone does not work. At the other end of the scales you have your DSLR/Mirrorless cameras, and dedicated astrocameras. These may be out of the price range of many people though. It's worth mentioning that entry level DSLRs tend to be in the $300 bracket, and are usable for things other than pretty star pictures.
 
 The main issue that most budding astrophotographers face is that they simply don't have a stable enough platform to take their pictures with. While you can freehand a DSLR to take photos of the moon, getting Andromeda may not be as simple. A good tripod or other stable mount may be needed. Because these other objects are so dim, you need to increase the amount of time your camera takes to take a picture. That, or you find a lens with a insanely large aperture, probably at an equally insane price.
 
