@@ -26,7 +26,7 @@ Now that we have the period, we can convert it to frequency:
 Eesh, that's a lot of significant figures for a very small value.
 How much of these do we actually need?
 
-The mathematically inclines among us are probably already able to estimate the rough numbers, but it's always nice to get confirmation.
+The mathematically inclined among us are probably already able to estimate the rough numbers, but it's always nice to get confirmation.
 
 Let's do some math.
 
