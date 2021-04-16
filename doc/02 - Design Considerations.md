@@ -1,4 +1,4 @@
-# Design Considerations
+# Design considerations
 
 The design of the star tracker needs to fulfill a number of prerequesites.
 Mainly, it needs to be portable, accurate and in our case, reasonably simple to build.
@@ -9,7 +9,7 @@ While we'd like to design our own PCBs for our needs, it's probably more likely 
 Fancy solutions are nice, but simple solutions are better.
 Nevertheless, if we can properly define our PCB specifications and requiremetns we can also design multiple implementations of the board based around a variety of microcontrollers.
 
-## Existing Products
+## Existing products
 
 If we consider existing star trackers, they share several similarities:
 

@@ -115,7 +115,7 @@ Speaking of hardware, we should start looking at what kind of motors we can get.
 Mainly, we should select on accuracy.
 It would be a shame if we spent all that time calculating our desired output RPM, and it turns out that our motor selection causes it to drift!
 
-### DC Motors
+### DC motors
 
 The simplest motors you can find are probably the [DC motors](https://en.wikipedia.org/wiki/DC_motor).
 They take a free-spinning magnetic core and give it motion by enabling and disabling electromagnets in a certain fashion.
@@ -129,7 +129,7 @@ As you increase the amount of load (i.e.: More weight) on the motor, the RPM at 
 This is not as large an issue for most applications, and there are ways to accurately control the RPM through some clever circuitry.
 However, we feel it's simpler to use a stepper motor instead.
 
-### Stepper Motors
+### Stepper motors
 
 [Stepper motors](https://en.wikipedia.org/wiki/Stepper_motor) are also DC motors, with the advantage that it divides a full rotation in equal steps.
 Through a certain magnet geometry the output of the shaft can be rotated by a specific amount each time an electromagnet is turned on or off.
@@ -155,7 +155,7 @@ If you tell the motor to point at 90 degrees it will figure out how to get there
 Unfortunately, the drawback is that a servo is only as good as it's position encoder, and cheaper servos don't have very accurate encoders.
 Not to say that they are wildly inaccurate for their intended purpose, they just probably won't be accurate enough for our purpose.
 
-### Weapon of Choice
+### Weapon of choice
 
 All these motors have their own benefits and drawbacks.
 Nevertheless, the easiest choice would be the stepper motor.
@@ -163,3 +163,44 @@ With the amount of steps being known, we can have a very fine control over the R
 The jitter of the steps should also be reduced if we take a stepper with a sufficiently high amount of steps per revolution.
 Additionally, none of the motors (at hobbyist prices) described can reliable rotate at an RPM of 0.000696 rpm.
 We'll definately need to use some form of gearbox to reduce the output of the motor, further decreasing the effect of the steps on the photos.
+
+NEMA stepper motors are probably the more well known examples.
+These are widely found in various applications because of their standardized design, specified by the [NEMA](https://en.wikipedia.org/wiki/National_Electrical_Manufacturers_Association).
+This is not to say that you buy your NEMA stepppers from this association, they just tell manufacturers what the dimensions need to be, where the following number specifies a certain size.
+This means that any motor that is sold as a NEMA 8/17/24 by manufacturer A will fit if you initially planned on using the same NEMA motor from manufacturer B without a redesign.
+Differences between things such as voltages, holding torques and rated current do exist, so keep that in mind.
+
+<div style="text-align:center">
+<img src="https://reprap.org/mediawiki/images/c/c1/RepRap-NEMA-17.jpg" height=400 alt="NEMA 17 motor">
+<p>NEMA 17 motor, Robotdigg, 2013</p>
+</div>
+
+Another well-known little motor is the 28BYJ-48.
+This tiny little thing is a staple in a lot of hobby projects due to it's low cost and small size.
+Perhaps surprisingly, this motor tends to have more steps per revolution than the average NEMA 17.
+It's worth mentioning however, that not all 28BYJ-48 are built to the same specification.
+Some have 4096 (!) steps per revolution, some have a few less, some have a lot less.
+This is achieved with an internal gearbox that steps down the motor inside, but gear ratios can vary between manufacturers.
+When you use one of these, make sure to determine how many steps you have accurately.
+
+<div style="text-align:center">
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/66/28BYJ-48_unipolar_stepper_motor_with_ULN2003_driver.jpg" height=400 alt="28BYJ-48 with a stepper driver">
+<p>28BYJ-48 stepper motor, attached to a ULN2003 stepper driver board, Kushagra Keshari, 2019</p>
+</div>
+
+While cheaper NEMA 17 motors are mostly available in 200 steps per revolution (1.8 degree/step), 400 steps per revolution (0.9 degrees/step) motors also exist.
+However, these do not stack up against the 4096 steps per revolution (0,0889 degrees/step).
+What these motors lack in comparative resolution, they make up in top speed and torque.
+We've done some experimenting with the 28BYJ-48, and could not reliably get it to spin faster than about 15 RPM, whereas a NEMA17 will happily do 120RPM with room to spare.
+In terms of torque, the holding torque of the 28BYJ-48 is listed as 0.0343 Nm, whereas a NEMA 17 will usually sit between 0.2 Nm and 0.6 Nm.
+
+What do these values mean for our astrotracker, though?
+
+Well, as we will definately need to use our own gearbox to step down the rpm, this will also increase the steps per (output) revolution and output torque of our motors.
+Assuming we want to run with a 10,000 : 1 gear ration (10,000 rotations on the input get you 1 full rotation on the output), we would increase our steps per rotation and torque by the same factor 10,000.
+This means that an average NEMA 17 would need 2,000,000 steps (0,00018 degrees/step) for a full rotation and would have about 4,000 Nm of torque.
+That means it can lift a little over 400kg on the end of a meter long stick (assuming you gearbox does not explode before that!).
+The 28BYJ-48 logically needs 40,960,000 steps (0,00000879 degrees / step) and would be able to output 343 Nm of torque, or just under 35 kg at the end of that same stick.
+
+We will be designing for the 28BYJ-48, even with the drawbacks, the high amount of steps per revolution is a definate benefit.
+If we were also willing to lose out on a bit of torque, we could even slow the motor down a little and use a less complex gearbox.

@@ -101,7 +101,7 @@ This has the issue that you need to take a lot more photos to gather the same am
 Stacking is used to combine these images after the fact.
 Alternatively we find a way to keep the camera pointed at the same point in the sky. Enter: The star tracker!
 
-## Star Trackers
+## Star trackers
 
 Star trackers are neat little devices that counter the rotation of the earth.
 Generally attached to a nice and steady tripod, they slowly rotate the camera around to, you guessed it, track the stars' motion.
@@ -111,7 +111,15 @@ Commercial products already exist to fulfill this purpose.
 Their price varies, but they will generally be in the $400 area, depending on your location.
 Why spend that amount of money, when you can spend more on materials, time and failures to build one your own?
 
-In this repository, we're exploring the design, and implementation details of such a device.
+## Purpose
+
+This writeup is meant for the reader to use as a reference, explanation or supporting document for our design.
+Some of you may have other tools you can use that you might want to incorporate in your production process.
+It's not unreasonable that at least a few of you have a lathe, CNC, laser cutter, et cetera.
+These tools might provide you with better results than a 3D printer can, but you might have to redesign some part(s).
+The writeup would then function as a reference to why we did what we did, for you to interpret and adapt to your own needs.
+
+In this repository, we're exploring the design, and implementation details of a star tracker.
 What considerations do we have to make, and how do we go about implementing it?
 Answers to these questions will hopefully be answered when I have the time to work on this project.
 External contributions are also very welcome, and even encouraged!
