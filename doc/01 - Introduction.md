@@ -123,3 +123,4 @@ In this repository, we're exploring the design, and implementation details of a 
 What considerations do we have to make, and how do we go about implementing it?
 Answers to these questions will hopefully be answered when we have the time to work on this project.
 External contributions are also very welcome, and even encouraged!
+As this project touches on many different fields (mechanical, electrical, astronomical, hobbyistical, etc.) there will always be someone who knows more on a particular subject than we do, and we encourage these people to point out and/or correct mistakes we make along the way!
