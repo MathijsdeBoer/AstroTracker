@@ -27,6 +27,10 @@ But we'll have warned you, lest we make a mechanical engineer very sad.
 <p>Terminology used to describe the anatomy of a gear, Honaroog, 2007.</p>
 </div>
 
+Another value to keep in mind is the [module](https://en.wikipedia.org/wiki/Gear#Standard_pitches_and_the_module_system) of the gear.
+This value describes the relationship between the amount of teeth and the pitch diameter (pitch circle on the image).
+The lower the module, the smaller the gear and its teeth.
+
 So what about these ratios?
 This is pretty simple, really.
 If you take the amount of teeth of one gear, and divide it by the amount of teeth on the other gear, you get the gear ratio.
@@ -124,7 +128,7 @@ At the cost of this complexity, you gain a lot of reliability and achieve a comp
 <p>The amount of gears per stage of reduction for the described gearbox types.</p>
 </div>
 
-### Worm gears
+### Other options
 
 We would be amiss if we were not to mention the worm gear.
 Beloved by engineers and birds alike, this gear uses a screw-shaped gear, the worm gear, and interfaces it with a regular gear, the worm wheel.
@@ -135,9 +139,48 @@ This is not without issues, though.
 The worm gear cannot be back-driven, which means that you can't rotate the output to rotate the input, and the output rotational axis is at an angle from the input, which may make designing a gearbox difficult.
 On top of this, the efficiency of a worm gear is not as high as other setups due to the increased friction.
 
+Finally, we have the harmonic drive, which uses a flexible inner gear in a solid outer gear.
+The flexing gear has a few less teeth than the outer gear, and is flexed into contact by an internal oval shape.
+These have also allowed for impressive gear ratios in small packages.
+Unfortunately, these are also quite difficult to get right for hobbyists.
+
 ## What does this mean for us?
 
 It's hard to say if using a spur gearbox or a planetary gearset is the best for our purpose.
 With our relatively low torque and RPM application, neither's strengths and weaknesses really have an impact.
 However, as someone will probably mount their expensive camera to the other end, we'll most likely want the improved reliability of the planetary gearsets.
 The increased complexity will have to be a hit we'll take.
+
+As we're targeting a 10,000 : 1 total reduction, we have a few options to divide this up:
+
+    10 : 1
+    ^ We're using that number in this section, the  ": 1" is implied
+
+    4 * 4 * 5 * 5 * 5 * 5   = 10,000
+    10 * 10 * 10 * 10       = 10,000
+    100 * 100               = 10,000
+
+There are more possible combinations, of course, but there is a balance to be struck between the amount of stages and keeping the individual reductions relatively small.
+As the reduction grows, so does the amount of teeth involved, increasing the size of the gears.
+Conversely, as the individual reductions are smaller, more stages are needed to get to the same result.
+As we don't want to create gears that are too small or too large, we need to set a minimum and maximum amount of teeth we are willing to use.
+We aim to stay above 10, and below 60, though you might find your manufacturing capabilities allowing for values outside this range.
+As we use a 3D printer, we use a module of 1.0mm, which is about as small as you would reasonably want to go on an FDM printer with a 0.4mm nozzle.
+
+To determine the numbers of teeth we need for our sun gears, planet gears and ring gear, we use [this](http://www.thecatalystis.com/gears/) online tool.
+With some careful mathematical operations (read: we guessed and tried random numbers) we aimed to generate the reductions described above, and checked them against our desired amount of teeth.
+The smallest we could reasonably get a 10 : 1 reduction used too many teeth in the ring gear, and we could not even get a 100 : 1 reduction in the tool.
+4 : 1 and 5 : 1 is very achievable, though, and we even found a solution that uses the same amount of teeth in the ring gear, which would let us use the same ring gear for all of our reductions in one neat package!
+The found values ended up being:
+
+    4 : 1 Reduction:
+        Sun Gear: 16 teeth
+        Planet Gear: 16 teeth
+        Ring Gear: 48 teeth
+    5 : 1
+        Sun Gear: 12 teeth
+        Planet Gear: 18 teeth
+        Ring Gear: 48 teeth
+
+In theory, we could go even smaller with 24 teeth on the ring gear, however, the sun gear would be 8 teeth for the 4 : 1 reduction, and 6 for the 5 : reduction.
+Both these fall outside the range we're willing to use, as more larger gears allow for a little more load.
