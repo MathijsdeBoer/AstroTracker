@@ -165,9 +165,9 @@ As the reduction grows, so does the amount of teeth involved, increasing the siz
 Conversely, as the individual reductions are smaller, more stages are needed to get to the same result.
 As we don't want to create gears that are too small or too large, we need to set a minimum and maximum amount of teeth we are willing to use.
 We aim to stay above 10, and below 60, though you might find your manufacturing capabilities allowing for values outside this range.
-As we use a 3D printer, we use a module of 1.0mm, which is about as small as you would reasonably want to go on an FDM printer with a 0.4mm nozzle.
+As we use a 3D printer, we shouldn't use a module of lower than 1.0mm, which is about as small as you would reasonably want to go on an FDM printer with a 0.4mm nozzle.
 
-To determine the numbers of teeth we need for our sun gears, planet gears and ring gear, we use [this](http://www.thecatalystis.com/gears/) online tool.
+To determine the numbers of teeth we need for our sun gears, planet gears and ring gear, we use [this online tool](http://www.thecatalystis.com/gears/).
 With some careful mathematical operations (read: we guessed and tried random numbers) we aimed to generate the reductions described above, and checked them against our desired amount of teeth.
 The smallest we could reasonably get a 10 : 1 reduction used too many teeth in the ring gear, and we could not even get a 100 : 1 reduction in the tool.
 4 : 1 and 5 : 1 is very achievable, though, and we even found a solution that uses the same amount of teeth in the ring gear, which would let us use the same ring gear for all of our reductions in one neat package!
@@ -183,4 +183,4 @@ The found values ended up being:
         Ring Gear: 48 teeth
 
 In theory, we could go even smaller with 24 teeth on the ring gear, however, the sun gear would be 8 teeth for the 4 : 1 reduction, and 6 for the 5 : reduction.
-Both these fall outside the range we're willing to use, as more larger gears allow for a little more load.
+Both these fall outside the range we're willing to use, as larger gears allow for a little more load.
